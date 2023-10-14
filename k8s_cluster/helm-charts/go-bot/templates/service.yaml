@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-bot-service
+spec:
+  selector:
+    app: go-bot
+  ports:
+    - protocol: TCP
+      port: {{ .Values.service.port }}  # port being served to
+      targetPort: {{ .Values.service.targetPort }}  # listening port 

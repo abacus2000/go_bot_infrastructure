@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: SSL Certificate for Go Bot Site
+
+Parameters:
+  DomainName:
+    Type: String
+    Description: Domain name for the certificate
+  HostedZoneId:
+    Type: String
+    Description: Route53 Hosted Zone ID
+
+Resources:
+  SSLCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Ref DomainName
+      DomainValidationOptions:
+        - DomainName: !Ref DomainName
+          HostedZoneId: !Ref HostedZoneId
+      Tags:
+        - Key: Name
+          Value: GoBotSiteCertificate

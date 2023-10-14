@@ -1,0 +1,14 @@
+__pycache__
+.dockerignore
+Dockerfile
+*.pyc
+*.pyo
+*.pyd
+db.sqlite3
+*.git
+*.so
+*.DS_Store
+*push.txt
+*.sha256
+*.md
+admin.sh

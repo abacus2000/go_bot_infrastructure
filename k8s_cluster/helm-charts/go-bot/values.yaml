@@ -1,0 +1,7 @@
+replicaCount: 1
+image:
+  repository: 007469101954.dkr.ecr.us-east-1.amazonaws.com/go-bot-arean
+  tag: latest
+service:
+  port: 5000
+  targetPort: 5000
