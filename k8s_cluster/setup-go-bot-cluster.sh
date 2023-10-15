@@ -4,6 +4,7 @@ chmod +x ./scripts/install-prerequisites.sh
 chmod +x ./scripts/create-go-bot-cluster.sh
 chmod +x ./scripts/deploy-ssl-certificate.sh
 chmod +x ./scripts/deploy-go-bot-helm-chart.sh
+chmod +x ./scripts/deploy-load-balancer.sh
 
 # install needed libraries and tools 
 echo "Installing prerequisites..."
@@ -16,6 +17,10 @@ echo "Creating the Kubernetes cluster..."
 # deploy ssl certificate
 echo "Deploying SSL certificate..."
 ./scripts/deploy-ssl-certificate.sh
+
+# deploy - load balancer
+echo "Deploying the load balancer..."
+./scripts/deploy-load-balancer.sh
 
 # deploy - helm chart
 echo "Deploying the Go Bot Helm chart..."
