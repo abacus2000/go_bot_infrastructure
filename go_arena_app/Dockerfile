@@ -13,6 +13,6 @@ RUN pip3 install flask
 
 # RUN cp -r $(pip3 show dlgo | grep Location | cut -d' ' -f2)/dlgo /go_bot/dlgo
 
-EXPOSE 5000
+EXPOSE 80
 
 CMD ["python3", "/go_bot/app/app.py"]

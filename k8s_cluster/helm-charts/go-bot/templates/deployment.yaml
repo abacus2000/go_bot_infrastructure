@@ -16,8 +16,8 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: go-bot-arean
+        image: 007469101954.dkr.ecr.us-east-1.amazonaws.com/go-bot-arean:latest
         ports:
         - containerPort: 80
 
