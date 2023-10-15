@@ -29,36 +29,3 @@ spec:
 {{- if .Values.ssl.enabled }}
       host: testing.{{ .Values.baseDomain }}
 {{- end }}
-
-# apiVersion: networking.k8s.io/v1
-# kind: Ingress
-# metadata:
-#   name: services-ingress
-#   namespace: {{ .Release.Namespace }}
-#   annotations:
-#     kubernetes.io/ingress.class: alb
-#     alb.ingress.kubernetes.io/group.name: go-bot-alb-group
-#     alb.ingress.kubernetes.io/scheme: internet-facing
-#   {{- if not .Values.ssl.enabled }}
-#     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
-#   {{- else }}
-#     alb.ingress.kubernetes.io/ssl-redirect: '443'
-#     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
-#   {{- end }}
-#   labels:
-#     app: go-bot
-# spec:
-#   rules:
-#     - http:
-#         paths:
-#           - path: /*
-#             pathType: ImplementationSpecific
-#             backend:
-#               service:
-#                 name: go-bot-service
-#                 port: 
-#                   number: {{ .Values.service.port }} # this is 80 and is the kube 'service'
-#       host: go-bot.{{ .Values.baseDomain }}
-#   {{- if .Values.ssl.enabled }}
-#         host: sample-app.{{ .Values.baseDomain }}
-#   {{- end }}

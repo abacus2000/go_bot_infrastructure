@@ -20,23 +20,3 @@ spec:
         image: 007469101954.dkr.ecr.us-east-1.amazonaws.com/go-bot-arean:latest
         ports:
         - containerPort: 80
-
-# apiVersion: apps/v1
-# kind: Deployment
-# metadata:
-#   name: go-bot-deployment
-# spec:
-#   replicas: {{ .Values.replicaCount }}
-#   selector:
-#     matchLabels:
-#       app: go-bot
-#   template:
-#     metadata:
-#       labels:
-#         app: go-bot
-#     spec:
-#       containers:
-#       - name: go-bot
-#         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-#         ports:
-#         - containerPort: {{ .Values.service.targetPort }}  # 5000
