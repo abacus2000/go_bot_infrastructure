@@ -12,9 +12,9 @@ vpc:
     gateway: HighlyAvailable
 nodeGroups:
   - name: eks-node-group
-    instanceType: t3.medium
-    desiredCapacity: 3
+    instanceType: t3.small
+    desiredCapacity: 2
     privateNetworking: true
-    volumeSize: 30
+    volumeSize: 5
 
-availabilityZones: ["us-east-1a", "us-east-1b", "us-east-1c"]
+availabilityZones: ["us-east-1a", "us-east-1b"]

@@ -3,3 +3,4 @@ admin.sh
 *.sha256
 kubectl
 *.md
+*.ipynb
