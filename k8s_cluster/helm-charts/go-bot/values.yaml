@@ -1,7 +1,14 @@
-replicaCount: 1
-image:
-  repository: 007469101954.dkr.ecr.us-east-1.amazonaws.com/go-bot-arean
-  tag: latest
-service:
-  port: 5000
-  targetPort: 5000
+baseDomain: go-bot-arena.com
+ssl:
+  enabled: false
+
+# replicaCount: 1
+# image:
+#   repository: 007469101954.dkr.ecr.us-east-1.amazonaws.com/go-bot-arean
+#   tag: latest
+# service:
+#   port: 80  # service will listen on this port
+#   targetPort:  5000  # pods are listening on this port
+# ssl:
+#   enabled: false
+# baseDomain: "go-bot-arena.com"
